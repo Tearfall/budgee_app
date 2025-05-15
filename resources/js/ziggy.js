@@ -1,0 +1,5 @@
+const Ziggy = {"url":"http:\/\/localhost","port":null,"defaults":{},"routes":{"transactions.index":{"uri":"transactions","methods":["GET","HEAD"]},"transactions.create":{"uri":"transactions\/create","methods":["GET","HEAD"]},"transactions.store":{"uri":"transactions","methods":["POST"]},"transactions.show":{"uri":"transactions\/{transaction}","methods":["GET","HEAD"],"parameters":["transaction"]},"transactions.edit":{"uri":"transactions\/{transaction}\/edit","methods":["GET","HEAD"],"parameters":["transaction"]},"transactions.update":{"uri":"transactions\/{transaction}","methods":["PUT","PATCH"],"parameters":["transaction"]},"transactions.destroy":{"uri":"transactions\/{transaction}","methods":["DELETE"],"parameters":["transaction"]},"storage.local":{"uri":"storage\/{path}","methods":["GET","HEAD"],"wheres":{"path":".*"},"parameters":["path"]}}};
+if (typeof window !== 'undefined' && typeof window.Ziggy !== 'undefined') {
+  Object.assign(Ziggy.routes, window.Ziggy.routes);
+}
+export { Ziggy };
